@@ -2,14 +2,12 @@
 layout: default
 ---
 
-<div class="home">
-
   <h1 class="page-heading">Posts</h1>
   
   {{ content }}
-<div id="tag-cloud">
-  {{ site | tag_cloud }}
-</div>
+  <div id="tag-cloud">
+    {{ site | tag_cloud }}
+  </div>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -25,4 +23,3 @@ layout: default
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   
-</div>

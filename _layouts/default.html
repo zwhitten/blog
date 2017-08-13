@@ -7,23 +7,27 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <meta name="description" content="{{ site.title }} : {{ site.description }}">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/bootstrap.min.css' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="icon" href="/assets/images/favicon.png">
     <title>{{ site.title}}</title>
   </head>
 
   <body>
+        {% include header.html %}
 
-{% include header.html %}
+    <div id="wrap">
+      <div id="main" class="container clear-top" style="height: 100%">
+
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      
-      <section id="main_content" class="inner">
-      
-        {{ content }}
-      </section>
+      {{ content }}
+      </div>
+
+    <!-- Side bar -->
+    <!-- {% include sidebar.html %} -->
     </div>
 
     {% include footer.html %}
+  </body>
 </html>

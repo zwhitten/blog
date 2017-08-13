@@ -1,9 +1,7 @@
     <!-- FOOTER  -->
 
-
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-      <div class="footer-col footer-col-1">
+    <footer class="footer">
+      <div class="col-lg-3 col-lg-offset-3">
         <ul class="contact-list">
           <li>
             {% if site.author %}
@@ -20,8 +18,7 @@
             </li>
         </ul>
       </div>
-
-      <div class="footer-col footer-col-2">
+      <div class="col-lg-3">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -36,14 +33,11 @@
           {% endif %}
         </ul>
       </div>
-        <div class="footer-col footer-col-3">
-          <ul>
+    </footer>
 
-          </ul>
-        </div>
-      </footer>
-    </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
     {% if site.google_analytics %}
      {% include google-analytics.html %}
     {% endif %}
