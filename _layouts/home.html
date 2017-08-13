@@ -2,24 +2,30 @@
 layout: default
 ---
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-  <div id="tag-cloud">
-    {{ site | tag_cloud }}
+  <div class="col-lg-8 col-lg-offset-2">
+    <h1 class="page-heading">Posts</h1>
+    
+    {{ content }}
+
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   </div>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  
+<div class="col-lg-2">
+  <h3>Tags:</h3>
+    <div id="tag-cloud">
+      {{ site | tag_cloud }}
+    </div>
+</div>

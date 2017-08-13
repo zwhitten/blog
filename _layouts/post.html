@@ -3,8 +3,8 @@ layout: default
 ---
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <h1 class="text-muted" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="">
+        <h1 class="" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="text-muted">
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
            {{ page.date | date: date_format }}
@@ -21,7 +21,9 @@ layout: default
     </div>
 
   <div class="row">
+    <div class="col-lg-6 col-lg-offset-2">
     {% if page.comments %}
       {% include disqus_comments.html %}
     {% endif %}
+    </div>
   </div>
