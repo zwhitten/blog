@@ -10,7 +10,7 @@ I've been experimenting lately with [Flutter](https://flutter.io) for building c
 
  I had previously looked into React Native and Nativescript options. Both were/are great especially if you're already a JavaScript developer (or want to be one). React Native is obviously more suited for developers who already have some familiarity with React. Nativescript likewise offers a pretty seamless transition for people already familiar with Angular. The most impressie thing about Nativescript to me was Expo which allows for loading your code onto an actual device without connecting to the computer. 
 
- ### Enter Flutter...
+### Enter Flutter...
 
 Flutter offers pretty much all of the same advantages of it's javascript counterparts. Namely, true write once and run anywhere code. One big difference however is that Flutter doesn't interact directly with native components. Flutter animates and draws all of it's components separately which means that there is no JavaScript to native bridge required within the applications. 
 
